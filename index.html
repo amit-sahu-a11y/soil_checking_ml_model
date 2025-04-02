@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Crop & Soil Prediction</h2>
+        <form id="predictionForm">
+            <label>Soil pH: <input type="number" step="0.1" id="soil_pH" required></label>
+            <label>Moisture: <input type="number" step="0.1" id="moisture" required></label>
+            <label>Nitrogen: <input type="number" step="0.1" id="nitrogen" required></label>
+            <label>Phosphorus: <input type="number" step="0.1" id="phosphorus" required></label>
+            <label>Potassium: <input type="number" step="0.1" id="potassium" required></label>
+            <label>Temperature: <input type="number" step="0.1" id="temperature" required></label>
+            <label>Rainfall: <input type="number" step="0.1" id="rainfall" required></label>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
